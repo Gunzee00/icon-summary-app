@@ -62,7 +62,7 @@ class AccountActivities extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  "Total Post",
+                  "Followers",
                   style: LocalTextStyle.textTheme.bodyMedium!.copyWith(
                     color: Colors.black,
                   ),
@@ -87,13 +87,13 @@ class AccountActivities extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center, // Memusatkan child secara horizontal
               children: [
                 Text(
-                  "1010",
+                  "10",
                   style: LocalTextStyle.textTheme.bodyMedium!.copyWith(
                     color: Colors.black,
                   ),
                 ),
                 Text(
-                  "Total Post",
+                  "Following",
                   style: LocalTextStyle.textTheme.bodyMedium!.copyWith(
                     color: Colors.black,
                   ),
