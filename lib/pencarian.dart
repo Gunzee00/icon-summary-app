@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:icon_sumarry_app/views/screens/account_summary/pages/accountSummarryScreen.dart';
 
 class PencarianPage extends StatelessWidget {
   const PencarianPage({super.key});
@@ -203,7 +204,10 @@ class PencarianPage extends StatelessWidget {
           child: ElevatedButton(
             onPressed: () {
               // Tindakan yang dilakukan saat tombol ditekan
-              print("Tombol Selanjutnya ditekan");
+              // print("Tombol Selanjutnya ditekan");
+              Navigator.push(
+                context, MaterialPageRoute(builder: (context) => AccountSummaryScreen()),
+              );
             },
             child: Text(
               "Selanjutnya",
