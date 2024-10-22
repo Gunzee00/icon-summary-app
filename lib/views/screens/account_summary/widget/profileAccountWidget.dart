@@ -26,12 +26,23 @@ class ProfileAccount extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 30.0),
-              Text(
-                "John Doe",
-                style: LocalTextStyle.textTheme.headlineSmall!.copyWith(
-                  color: Colors.black,
-                ),
-              ),
+              Row(
+                children: [
+                  Text(
+                    "John Doe",
+                    style: LocalTextStyle.textTheme.bodyMedium!.copyWith(
+                      color: Colors.black,
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Text(
+                    "John Doe",
+                    style: LocalTextStyle.textTheme.bodyMedium!.copyWith(
+                      color: Colors.black,
+                    ),
+                  ),
+                ],
+              )
             ],
           ),
           SizedBox(height: 40),
@@ -46,7 +57,7 @@ class ProfileAccount extends StatelessWidget {
                     color: Colors.black,
                   ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Text(
                   "John Doe adalah IT Consultant",
                   style: LocalTextStyle.textTheme.bodyMedium!.copyWith(

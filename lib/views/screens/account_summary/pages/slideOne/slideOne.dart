@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:icon_sumarry_app/views/screens/account_summary/widget/accountActivitiesWidget.dart';
+import 'package:icon_sumarry_app/views/screens/account_summary/widget/popularHastagWIdget.dart';
+import 'package:icon_sumarry_app/views/screens/account_summary/widget/popularMentionWidget.dart';
 import 'package:icon_sumarry_app/views/screens/account_summary/widget/profileAccountWidget.dart';
 
 class SlideOne extends StatelessWidget {
@@ -16,6 +18,10 @@ class SlideOne extends StatelessWidget {
           ProfileAccount(),
           SizedBox(height: 30),
           AccountActivities(),
+          SizedBox(height: 30),
+          PopularHastag(),
+          SizedBox(height: 30),
+          PopularMention(),
        ],),
       ),
     );
