@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:icon_sumarry_app/pencarian.dart';
-import 'package:icon_sumarry_app/views/screens/account_summary/pages/login/registerScreen.dart';
+import 'package:icon_sumarry_app/views/screens/account_summary/pages/login/loginScreen.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class RegisterScreen extends StatefulWidget {
+  const RegisterScreen({super.key});
 
   @override
-  LoginScreenState createState() => LoginScreenState();
+  RegisterScreenState createState() => RegisterScreenState();
 }
 
-class LoginScreenState extends State<LoginScreen> {
+class RegisterScreenState extends State<RegisterScreen> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  final TextEditingController confirmPasswordController = TextEditingController();
 
-  // Variable to track password visibility
-  bool _isPasswordVisible = false;
+  bool _obscurePassword = true;
+  bool _obscureConfirmPassword = true;
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +39,7 @@ class LoginScreenState extends State<LoginScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  "Login",
+                  "Register",
                   style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 40),
@@ -50,71 +50,59 @@ class LoginScreenState extends State<LoginScreen> {
                     border: const OutlineInputBorder(),
                     filled: true,
                     fillColor: Colors.grey.shade200,
-                    prefixIcon: const Icon(Icons.email, color: Colors.blue),
+                    prefixIcon: const Icon(Icons.email),
                   ),
                 ),
                 const SizedBox(height: 20),
                 TextField(
                   controller: passwordController,
-                  obscureText: !_isPasswordVisible, // Toggle password visibility
                   decoration: InputDecoration(
                     hintText: "Password",
                     border: const OutlineInputBorder(),
                     filled: true,
                     fillColor: Colors.grey.shade200,
-                    prefixIcon: const Icon(Icons.lock, color: Colors.blue),
+                    prefixIcon: const Icon(Icons.lock),
                     suffixIcon: IconButton(
                       icon: Icon(
-                        _isPasswordVisible
-                            ? Icons.visibility
-                            : Icons.visibility_off,
-                        color: Colors.blue,
+                        _obscurePassword ? Icons.visibility : Icons.visibility_off,
                       ),
                       onPressed: () {
                         setState(() {
-                          _isPasswordVisible = !_isPasswordVisible; // Toggle visibility
+                          _obscurePassword = !_obscurePassword;
                         });
                       },
                     ),
                   ),
+                  obscureText: _obscurePassword,
+                ),
+                const SizedBox(height: 20),
+                TextField(
+                  controller: confirmPasswordController,
+                  decoration: InputDecoration(
+                    hintText: "Confirm Password",
+                    border: const OutlineInputBorder(),
+                    filled: true,
+                    fillColor: Colors.grey.shade200,
+                    prefixIcon: const Icon(Icons.lock),
+                    suffixIcon: IconButton(
+                      icon: Icon(
+                        _obscureConfirmPassword ? Icons.visibility : Icons.visibility_off,
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          _obscureConfirmPassword = !_obscureConfirmPassword;
+                        });
+                      },
+                    ),
+                  ),
+                  obscureText: _obscureConfirmPassword,
                 ),
                 const SizedBox(height: 30),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const PencarianPage()),
-                    );
-                  },
-                  style: ElevatedButton.styleFrom(
-                    minimumSize: const Size(double.infinity, 50),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                  ),
-                  child: const Text("Login"),
-                ),
-                const SizedBox(height: 20),
-                TextButton(
-                  onPressed: () {
-                    // Navigate to Registration page
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const PencarianPage()),
-                    );
-                  },
-                  child: const Text(
-                    "Belum punya akun?",
-                    style: TextStyle(color: Colors.blue),
-                  ),
-                ),
-                const SizedBox(height: 10),
-                ElevatedButton(
-                  onPressed: () {
-                    // Navigate to Registration page when Register button is pressed
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const RegisterScreen()),
+                      MaterialPageRoute(builder: (context) => const LoginScreen()),
                     );
                   },
                   style: ElevatedButton.styleFrom(
@@ -124,6 +112,16 @@ class LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                   child: const Text("Register"),
+                ),
+                const SizedBox(height: 20),
+                TextButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: const Text(
+                    "Sudah punya akun? Login",
+                    style: TextStyle(color: Colors.blue),
+                  ),
                 ),
               ],
             ),
