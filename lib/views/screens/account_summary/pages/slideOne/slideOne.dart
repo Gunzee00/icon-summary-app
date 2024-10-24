@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:icon_sumarry_app/views/screens/account_summary/widget/accountActivitiesWidget.dart';
-import 'package:icon_sumarry_app/views/screens/account_summary/widget/popularHastagWIdget.dart';
-import 'package:icon_sumarry_app/views/screens/account_summary/widget/popularMentionWidget.dart';
-import 'package:icon_sumarry_app/views/screens/account_summary/widget/profileAccountWidget.dart';
+import 'package:icon_sumarry_app/views/screens/account_summary/widget/slideOne/profileAccountWidget.dart';
+
+import '../../widget/slideOne/accountActivitiesWidget.dart';
+import '../../widget/slideOne/popularHastagWIdget.dart';
+import '../../widget/slideOne/popularMentionWidget.dart';
 
 class SlideOne extends StatelessWidget {
   const SlideOne({super.key});
