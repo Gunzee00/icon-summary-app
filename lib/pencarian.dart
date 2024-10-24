@@ -8,7 +8,7 @@ class PencarianPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Pencarian"),
+        title: const Text("Pencarian"),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -19,7 +19,7 @@ class PencarianPage extends StatelessWidget {
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(
+                const SizedBox(
                   width:
                       150, // Menentukan lebar yang konsisten untuk semua label
                   child: Text(
@@ -31,14 +31,14 @@ class PencarianPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 Expanded(
                   child: TextField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20.0),
                       ),
-                      contentPadding: EdgeInsets.symmetric(
+                      contentPadding: const EdgeInsets.symmetric(
                         vertical: 10.0,
                         horizontal: 15.0,
                       ),
@@ -47,13 +47,13 @@ class PencarianPage extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
 
             // Field Hastag / Topik / Event
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(
+                const SizedBox(
                   width:
                       150, // Menentukan lebar yang konsisten untuk semua label
                   child: Text(
@@ -65,14 +65,14 @@ class PencarianPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 Expanded(
                   child: TextField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20.0),
                       ),
-                      contentPadding: EdgeInsets.symmetric(
+                      contentPadding: const EdgeInsets.symmetric(
                         vertical: 10.0,
                         horizontal: 15.0,
                       ),
@@ -81,13 +81,13 @@ class PencarianPage extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
 
             // Field Informasi Pribadi
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
+                const SizedBox(
                   width:
                       150, // Menentukan lebar yang konsisten untuk semua label
                   child: Text(
@@ -99,14 +99,14 @@ class PencarianPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 Expanded(
                   child: TextField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20.0),
                       ),
-                      contentPadding: EdgeInsets.symmetric(
+                      contentPadding: const EdgeInsets.symmetric(
                         vertical: 10.0,
                         horizontal: 15.0,
                       ),
@@ -115,9 +115,9 @@ class PencarianPage extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
 
-            Center(
+            const Center(
               child: Text(
                 "Platform Sumber Data",
                 style: TextStyle(
@@ -127,71 +127,71 @@ class PencarianPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
 
             // Platform buttons with icons
             ElevatedButton.icon(
               onPressed: () {},
-              icon: Icon(Icons.facebook, color: Colors.white),
-              label: Text("Facebook"),
+              icon: const Icon(Icons.facebook, color: Colors.white),
+              label: const Text("Facebook"),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue, // Facebook blue color
-                minimumSize: Size(double.infinity, 50), // Panjang button
+                minimumSize: const Size(double.infinity, 50), // Panjang button
                 foregroundColor: Colors.white, // Warna teks
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             ElevatedButton.icon(
               onPressed: () {},
-              icon: Icon(Icons.video_library, color: Colors.white),
-              label: Text("Tiktok"),
+              icon: const Icon(Icons.video_library, color: Colors.white),
+              label: const Text("Tiktok"),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.black, // Tiktok black color
-                minimumSize: Size(double.infinity, 50), // Panjang button
+                minimumSize: const Size(double.infinity, 50), // Panjang button
                 foregroundColor: Colors.white, // Warna teks
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             ElevatedButton.icon(
               onPressed: () {},
-              icon: Icon(Icons.camera_alt, color: Colors.white),
-              label: Text("Instagram"),
+              icon: const Icon(Icons.camera_alt, color: Colors.white),
+              label: const Text("Instagram"),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.pinkAccent, // Instagram pink color
-                minimumSize: Size(double.infinity, 50), // Panjang button
+                minimumSize: const Size(double.infinity, 50), // Panjang button
                 foregroundColor: Colors.white, // Warna teks
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             ElevatedButton.icon(
               onPressed: () {},
-              icon: Icon(Icons.chat, color: Colors.white),
-              label: Text("X/Twitter"),
+              icon: const Icon(Icons.chat, color: Colors.white),
+              label: const Text("X/Twitter"),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.lightBlue, // Twitter blue color
-                minimumSize: Size(double.infinity, 50), // Panjang button
+                minimumSize: const Size(double.infinity, 50), // Panjang button
                 foregroundColor: Colors.white, // Warna teks
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             ElevatedButton.icon(
               onPressed: () {},
-              icon: Icon(Icons.ondemand_video, color: Colors.white),
-              label: Text("Youtube"),
+              icon: const Icon(Icons.ondemand_video, color: Colors.white),
+              label: const Text("Youtube"),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.red, // Youtube red color
-                minimumSize: Size(double.infinity, 50), // Panjang button
+                minimumSize: const Size(double.infinity, 50), // Panjang button
                 foregroundColor: Colors.white, // Warna teks
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             ElevatedButton.icon(
               onPressed: () {},
-              icon: Icon(Icons.business_center, color: Colors.white),
-              label: Text("LinkedIn"),
+              icon: const Icon(Icons.business_center, color: Colors.white),
+              label: const Text("LinkedIn"),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue[800], // LinkedIn blue color
-                minimumSize: Size(double.infinity, 50), // Panjang button
+                minimumSize: const Size(double.infinity, 50), // Panjang button
                 foregroundColor: Colors.white, // Warna teks
               ),
             ),
@@ -206,16 +206,18 @@ class PencarianPage extends StatelessWidget {
               // Tindakan yang dilakukan saat tombol ditekan
               // print("Tombol Selanjutnya ditekan");
               Navigator.push(
-                context, MaterialPageRoute(builder: (context) => AccountSummaryScreen()),
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const AccountSummaryScreen()),
               );
             },
+            style: ElevatedButton.styleFrom(
+              minimumSize: const Size(double.infinity, 50),
+              // Warna teks
+            ),
             child: Text(
               "Selanjutnya",
               style: TextStyle(color: Colors.black),
-            ),
-            style: ElevatedButton.styleFrom(
-              minimumSize: Size(double.infinity, 50),
-              // Warna teks
             ),
           ),
         ),
