@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:icon_sumarry_app/views/screens/account_summary/widget/accountActivitiesWidget.dart';
-import 'package:icon_sumarry_app/views/screens/account_summary/widget/popularHastagWIdget.dart';
-import 'package:icon_sumarry_app/views/screens/account_summary/widget/popularMentionWidget.dart';
-import 'package:icon_sumarry_app/views/screens/account_summary/widget/profileAccountWidget.dart';
-import 'package:icon_sumarry_app/views/screens/account_summary/widget/wordCloudWidget.dart';
+import 'package:icon_sumarry_app/views/screens/account_summary/widget/slideOne/accountActivitiesWidget.dart';
+import 'package:icon_sumarry_app/views/screens/account_summary/widget/slideOne/popularHastagWIdget.dart';
+import 'package:icon_sumarry_app/views/screens/account_summary/widget/slideOne/popularMentionWidget.dart';
+import 'package:icon_sumarry_app/views/screens/account_summary/widget/slideOne/profileAccountWidget.dart';
 
 class SlideOne extends StatelessWidget {
   const SlideOne({super.key});
@@ -23,7 +22,6 @@ class SlideOne extends StatelessWidget {
           SizedBox(height: 30),
           PopularMention(),
           SizedBox(height: 30),
-          WordCloud(),
        ],),
       ),
     );

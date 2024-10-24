@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:icon_sumarry_app/pencarian.dart';
 import 'package:icon_sumarry_app/views/screens/account_summary/pages/login/registerScreen.dart';
 
-import 'registerScreen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
