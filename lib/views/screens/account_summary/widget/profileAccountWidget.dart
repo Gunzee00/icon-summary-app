@@ -20,7 +20,7 @@ class ProfileAccount extends StatelessWidget {
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   image: DecorationImage(
-                    image: AssetImage('assets/images/profile.png'), 
+                    image: AssetImage('assets/images/profile.png'),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -45,13 +45,13 @@ class ProfileAccount extends StatelessWidget {
               )
             ],
           ),
-          SizedBox(height: 40),
+          const SizedBox(height: 40),
           Container(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                 Text(
+                Text(
                   "Biografi :",
                   style: LocalTextStyle.textTheme.headlineSmall!.copyWith(
                     color: Colors.black,

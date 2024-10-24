@@ -10,19 +10,21 @@ class SlideOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
-    return  Scaffold(
-       body: SingleChildScrollView(
-      // Padding dari tepi screen
-      padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.08),
-       child: Column(children: [
-          ProfileAccount(),
-          SizedBox(height: 30),
-          AccountActivities(),
-          SizedBox(height: 30),
-          PopularHastag(),
-          SizedBox(height: 30),
-          PopularMention(),
-       ],),
+    return Scaffold(
+      body: SingleChildScrollView(
+        // Padding dari tepi screen
+        padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.08),
+        child: const Column(
+          children: [
+            ProfileAccount(),
+            SizedBox(height: 30),
+            AccountActivities(),
+            SizedBox(height: 30),
+            PopularHastag(),
+            SizedBox(height: 30),
+            PopularMention(),
+          ],
+        ),
       ),
     );
   }
