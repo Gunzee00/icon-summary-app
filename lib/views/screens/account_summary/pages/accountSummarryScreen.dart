@@ -12,17 +12,16 @@ class AccountSummaryScreen extends StatefulWidget {
 class _AccountSummaryScreenState extends State<AccountSummaryScreen> {
   @override
   Widget build(BuildContext context) {
-
     // Ukuran Screen
-   return DefaultTabController(
+    return DefaultTabController(
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             "Account Summary",
           ),
           backgroundColor: Colors.white,
-          bottom: TabBar(
+          bottom: const TabBar(
             indicatorColor: Colors.black,
             tabs: [
               Tab(
@@ -40,7 +39,7 @@ class _AccountSummaryScreenState extends State<AccountSummaryScreen> {
             ],
           ),
         ),
-        body: TabBarView(
+        body: const TabBarView(
           children: [
             SlideOne(),
             SlideTwo(),
