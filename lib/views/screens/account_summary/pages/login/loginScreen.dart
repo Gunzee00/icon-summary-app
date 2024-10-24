@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:icon_sumarry_app/pencarian.dart';
-import 'package:icon_sumarry_app/views/screens/account_summary/pages/login/registerScreen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -83,6 +82,7 @@ class LoginScreenState extends State<LoginScreen> {
                 const SizedBox(height: 30),
                 ElevatedButton(
                   onPressed: () {
+                    // Navigate to PencarianPage when Login button is pressed
                     Navigator.push(
                       context,
                       MaterialPageRoute(
