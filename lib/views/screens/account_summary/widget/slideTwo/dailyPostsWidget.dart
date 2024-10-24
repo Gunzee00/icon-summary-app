@@ -1,16 +1,33 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 
+import 'package:icon_sumarry_app/styles/localTextStyle.dart';
+
 class DailyPosts extends StatelessWidget {
-  final List<int> postsByHour;
 
-  const DailyPosts({super.key, required this.postsByHour});
-
+  const DailyPosts({super.key});
+  
   @override
   Widget build(BuildContext context) {
-    return CustomPaint(
-      size: const Size(400, 400),
-      painter: _DailyPostsPainter(postsByHour),
+
+    final List<int> postsByHour = [
+      10,12,8,9,20,6,9,15,18,7,15,17,12,8,6,10,22,14,16,9,5,10,11,16,
+    ];
+
+    return Column(
+      children: [
+         Text(
+            'Daily Post By Hours',
+              style: LocalTextStyle.textTheme.headlineSmall!.copyWith(
+                color: Colors.black,
+              ),
+          ),
+        const SizedBox(height: 10,),
+        CustomPaint(
+          size: const Size(400, 400),
+          painter: _DailyPostsPainter(postsByHour),
+        ),
+      ],
     );
   }
 }
