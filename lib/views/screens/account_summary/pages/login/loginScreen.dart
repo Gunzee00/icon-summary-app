@@ -26,11 +26,11 @@ class LoginScreenState extends State<LoginScreen> {
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(20),
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
                   color: Colors.black26,
                   blurRadius: 10,
-                  offset: const Offset(0, 5),
+                  offset: Offset(0, 5),
                 ),
               ],
             ),
@@ -56,7 +56,8 @@ class LoginScreenState extends State<LoginScreen> {
                 const SizedBox(height: 20),
                 TextField(
                   controller: passwordController,
-                  obscureText: !_isPasswordVisible, // Toggle password visibility
+                  obscureText:
+                      !_isPasswordVisible, // Toggle password visibility
                   decoration: InputDecoration(
                     hintText: "Password",
                     border: const OutlineInputBorder(),
@@ -72,7 +73,8 @@ class LoginScreenState extends State<LoginScreen> {
                       ),
                       onPressed: () {
                         setState(() {
-                          _isPasswordVisible = !_isPasswordVisible; // Toggle visibility
+                          _isPasswordVisible =
+                              !_isPasswordVisible; // Toggle visibility
                         });
                       },
                     ),
@@ -83,7 +85,8 @@ class LoginScreenState extends State<LoginScreen> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const PencarianPage()),
+                      MaterialPageRoute(
+                          builder: (context) => const PencarianPage()),
                     );
                   },
                   style: ElevatedButton.styleFrom(
@@ -100,7 +103,8 @@ class LoginScreenState extends State<LoginScreen> {
                     // Navigate to Registration page
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const PencarianPage()),
+                      MaterialPageRoute(
+                          builder: (context) => const PencarianPage()),
                     );
                   },
                   child: const Text(
@@ -114,7 +118,8 @@ class LoginScreenState extends State<LoginScreen> {
                     // Navigate to Registration page when Register button is pressed
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const RegisterScreen()),
+                      MaterialPageRoute(
+                          builder: (context) => const RegisterScreen()),
                     );
                   },
                   style: ElevatedButton.styleFrom(
