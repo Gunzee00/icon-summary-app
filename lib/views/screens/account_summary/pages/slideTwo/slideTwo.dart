@@ -6,6 +6,8 @@ import 'package:icon_sumarry_app/views/screens/account_summary/widget/slideTwo/p
 import 'package:icon_sumarry_app/views/screens/account_summary/widget/slideTwo/populerPhoneNumberWidget.dart';
 import 'package:icon_sumarry_app/views/screens/account_summary/widget/slideTwo/populerWordsWidget.dart';
 
+import '../../widget/slideTwo/populerSentimentWidget.dart';
+
 class SlideTwo extends StatelessWidget {
   const SlideTwo({super.key});
 
@@ -27,6 +29,8 @@ class SlideTwo extends StatelessWidget {
             PopularPhoneNumberWidget(),
             const SizedBox(height: 30),
             PopularEngagementWidget(),
+            const SizedBox(height: 30),
+            PopularSentimentWidget(),
             const SizedBox(height: 30),
             ChartKeyword(),
             const SizedBox(height: 30),
