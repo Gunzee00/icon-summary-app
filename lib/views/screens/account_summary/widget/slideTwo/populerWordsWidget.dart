@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:icon_sumarry_app/styles/localColors.dart';
 import 'package:icon_sumarry_app/styles/localTextStyle.dart';
 import 'package:word_cloud/word_cloud_data.dart';
-import 'package:word_cloud/word_cloud_shape.dart';
 import 'package:word_cloud/word_cloud_tap.dart';
-import 'package:word_cloud/word_cloud_tap_view.dart';
 import 'package:word_cloud/word_cloud_view.dart';
 
 class PopularWordsWidget extends StatefulWidget {
