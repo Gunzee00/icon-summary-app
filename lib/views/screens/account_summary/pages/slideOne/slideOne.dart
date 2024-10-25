@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:icon_sumarry_app/views/screens/account_summary/widget/slideOne/profileAccountWidget.dart';
-
 import '../../widget/slideOne/accountActivitiesWidget.dart';
 import '../../widget/slideOne/popularHastagWIdget.dart';
 import '../../widget/slideOne/popularMentionWidget.dart';
