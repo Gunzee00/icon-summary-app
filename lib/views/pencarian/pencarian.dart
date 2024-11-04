@@ -131,7 +131,7 @@ class _PencarianPageState extends State<PencarianPage> {
               ),
             ),
             const SizedBox(height: 20),
-          WidgetIcon(),
+            WidgetIcon(),
           ],
         ),
       ),
