@@ -7,7 +7,7 @@ class LocalColorsStyle{
   static const MaterialColor primaryColor = MaterialColor(
     _primaryValue, 
       <int, Color>{
-      500: Color(LocalColorsStyle._primaryValue),
+      500: Color(LocalColorsStyle._primaryValue),                  
     },
   );
 
@@ -19,5 +19,4 @@ class LocalColorsStyle{
       500: Color(LocalColorsStyle. _lightGreenValue),
     },
   );
-
 }

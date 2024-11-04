@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:icon_sumarry_app/views/pencarian/widgetIcon.dart';
 import 'package:icon_sumarry_app/views/screens/account_summary/pages/accountSummarryScreen.dart';
 
-class PencarianPage extends StatelessWidget {
+class PencarianPage extends StatefulWidget {
   const PencarianPage({super.key});
+
+  @override
+  State<PencarianPage> createState() => _PencarianPageState();
+}
+
+class _PencarianPageState extends State<PencarianPage> {
+  String? _selectedPlatform;
 
   @override
   Widget build(BuildContext context) {
@@ -20,14 +28,13 @@ class PencarianPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(
-                  width:
-                      150, // Menentukan lebar yang konsisten untuk semua label
+                  width: 150,
                   child: Text(
                     "Akun sosial media",
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w500,
-                      color: Colors.black, // Mengubah warna teks menjadi hitam
+                      color: Colors.black,
                     ),
                   ),
                 ),
@@ -49,19 +56,17 @@ class PencarianPage extends StatelessWidget {
             ),
             const SizedBox(height: 20),
 
-            // Field Hastag / Topik / Event
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(
-                  width:
-                      150, // Menentukan lebar yang konsisten untuk semua label
+                  width: 150,
                   child: Text(
                     "Hastag / Topik / Event",
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w500,
-                      color: Colors.black, // Mengubah warna teks menjadi hitam
+                      color: Colors.black,
                     ),
                   ),
                 ),
@@ -83,19 +88,17 @@ class PencarianPage extends StatelessWidget {
             ),
             const SizedBox(height: 20),
 
-            // Field Informasi Pribadi
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(
-                  width:
-                      150, // Menentukan lebar yang konsisten untuk semua label
+                  width: 150,
                   child: Text(
                     "Informasi pribadi (Nama / Nomor Telepon / Email)",
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w500,
-                      color: Colors.black, // Mengubah warna teks menjadi hitam
+                      color: Colors.black,
                     ),
                   ),
                 ),
@@ -123,78 +126,12 @@ class PencarianPage extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black, // Mengubah warna teks menjadi hitam
+                  color: Colors.black,
                 ),
               ),
             ),
             const SizedBox(height: 20),
-
-            // Platform buttons with icons
-            ElevatedButton.icon(
-              onPressed: () {},
-              icon: const Icon(Icons.facebook, color: Colors.white),
-              label: const Text("Facebook"),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue, // Facebook blue color
-                minimumSize: const Size(double.infinity, 50), // Panjang button
-                foregroundColor: Colors.white, // Warna teks
-              ),
-            ),
-            const SizedBox(height: 10),
-            ElevatedButton.icon(
-              onPressed: () {},
-              icon: const Icon(Icons.video_library, color: Colors.white),
-              label: const Text("Tiktok"),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.black, // Tiktok black color
-                minimumSize: const Size(double.infinity, 50), // Panjang button
-                foregroundColor: Colors.white, // Warna teks
-              ),
-            ),
-            const SizedBox(height: 10),
-            ElevatedButton.icon(
-              onPressed: () {},
-              icon: const Icon(Icons.camera_alt, color: Colors.white),
-              label: const Text("Instagram"),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.pinkAccent, // Instagram pink color
-                minimumSize: const Size(double.infinity, 50), // Panjang button
-                foregroundColor: Colors.white, // Warna teks
-              ),
-            ),
-            const SizedBox(height: 10),
-            ElevatedButton.icon(
-              onPressed: () {},
-              icon: const Icon(Icons.chat, color: Colors.white),
-              label: const Text("X/Twitter"),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.lightBlue, // Twitter blue color
-                minimumSize: const Size(double.infinity, 50), // Panjang button
-                foregroundColor: Colors.white, // Warna teks
-              ),
-            ),
-            const SizedBox(height: 10),
-            ElevatedButton.icon(
-              onPressed: () {},
-              icon: const Icon(Icons.ondemand_video, color: Colors.white),
-              label: const Text("Youtube"),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.red, // Youtube red color
-                minimumSize: const Size(double.infinity, 50), // Panjang button
-                foregroundColor: Colors.white, // Warna teks
-              ),
-            ),
-            const SizedBox(height: 10),
-            ElevatedButton.icon(
-              onPressed: () {},
-              icon: const Icon(Icons.business_center, color: Colors.white),
-              label: const Text("LinkedIn"),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue[800], // LinkedIn blue color
-                minimumSize: const Size(double.infinity, 50), // Panjang button
-                foregroundColor: Colors.white, // Warna teks
-              ),
-            ),
+          WidgetIcon(),
           ],
         ),
       ),
@@ -203,8 +140,6 @@ class PencarianPage extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
           child: ElevatedButton(
             onPressed: () {
-              // Tindakan yang dilakukan saat tombol ditekan
-              // print("Tombol Selanjutnya ditekan");
               Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -213,9 +148,8 @@ class PencarianPage extends StatelessWidget {
             },
             style: ElevatedButton.styleFrom(
               minimumSize: const Size(double.infinity, 50),
-              // Warna teks
             ),
-            child: Text(
+            child: const Text(
               "Selanjutnya",
               style: TextStyle(color: Colors.black),
             ),
